@@ -1,6 +1,6 @@
 /**
  * \file cipher.c
- * 
+ *
  * \brief Generic cipher wrapper for PolarSSL
  *
  * \author Adriaan de Jong <dejong@fox-it.com>
@@ -80,10 +80,13 @@ static const int supported_ciphers[] = {
 
 #endif /* defined(POLARSSL_CAMELLIA_C) */
 
+        
 #if defined(POLARSSL_DES_C)
+/*
         POLARSSL_CIPHER_DES_CBC,
         POLARSSL_CIPHER_DES_EDE_CBC,
         POLARSSL_CIPHER_DES_EDE3_CBC,
+*/
 #endif /* defined(POLARSSL_DES_C) */
 
 #if defined(POLARSSL_BLOWFISH_C)
@@ -173,12 +176,14 @@ const cipher_info_t *cipher_info_from_type( const cipher_type_t cipher_type )
 #endif
 
 #if defined(POLARSSL_DES_C)
-        case POLARSSL_CIPHER_DES_CBC:
+/*
+  case POLARSSL_CIPHER_DES_CBC:
             return &des_cbc_info;
         case POLARSSL_CIPHER_DES_EDE_CBC:
             return &des_ede_cbc_info;
         case POLARSSL_CIPHER_DES_EDE3_CBC:
             return &des_ede3_cbc_info;
+*/
 #endif
 
 #if defined(POLARSSL_BLOWFISH_C)
@@ -268,12 +273,14 @@ const cipher_info_t *cipher_info_from_string( const char *cipher_name )
 #endif
 
 #if defined(POLARSSL_DES_C)
-    if( !strcasecmp( "DES-CBC", cipher_name ) )
+/*
+  if( !strcasecmp( "DES-CBC", cipher_name ) )
         return cipher_info_from_type( POLARSSL_CIPHER_DES_CBC );
     if( !strcasecmp( "DES-EDE-CBC", cipher_name ) )
         return cipher_info_from_type( POLARSSL_CIPHER_DES_EDE_CBC );
     if( !strcasecmp( "DES-EDE3-CBC", cipher_name ) )
         return cipher_info_from_type( POLARSSL_CIPHER_DES_EDE3_CBC );
+*/
 #endif
 
 #if defined(POLARSSL_BLOWFISH_C)

@@ -182,7 +182,7 @@
  * Do not add default entropy sources. These are the platform specific,
  * hardclock and HAVEGE based poll functions.
  *
- * This is useful to have more control over the added entropy sources in an 
+ * This is useful to have more control over the added entropy sources in an
  * application.
  *
  * Uncomment this macro to prevent loading of default entropy functions.
@@ -364,7 +364,7 @@
  *
  * Module:  library/blowfish.c
  */
-#define POLARSSL_BLOWFISH_C
+//#define POLARSSL_BLOWFISH_C
 
 /**
  * \def POLARSSL_CAMELLIA_C
@@ -385,7 +385,7 @@
  *      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256
  *      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256
  */
-#define POLARSSL_CAMELLIA_C
+//#define POLARSSL_CAMELLIA_C
 
 /**
  * \def POLARSSL_CERTS_C
@@ -609,7 +609,7 @@
  *
  * This modules adds support for the VIA PadLock on x86.
  */
-#define POLARSSL_PADLOCK_C
+//#define POLARSSL_PADLOCK_C
 
 /**
  * \def POLARSSL_PBKDF2_C
@@ -828,7 +828,7 @@
  * Module:  library/xtea.c
  * Caller:
  */
-#define POLARSSL_XTEA_C
+//#define POLARSSL_XTEA_C
 /* \} name */
 
 #endif /* config.h */
