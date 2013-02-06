@@ -1,0 +1,12 @@
+Per compilare:
+
+cd library
+ls -l *.sh
+
+Trovi:
+arm.sh
+x86.sh 
+ppc.sh
+
+A te la scelta! :-)
+Ciau
